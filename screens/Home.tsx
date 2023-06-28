@@ -1,17 +1,18 @@
-import * as React from 'react';
-import {Pressable, Text, TextInput, View} from 'react-native';
+import React from 'react';
+import {Pressable, Text, View} from 'react-native';
+import {FormField} from '../components/FormField';
 
 export function Home({navigation}: {navigation: any}) {
   return (
     <View
       style={{
-        flex: 1,
-        alignItems: 'center',
+        height: '100%',
         backgroundColor: '#fff',
+        padding: 16,
       }}>
-      <TextInput style={{backgroundColor: 'red', width: '100%'}} />
-      <TextInput style={{backgroundColor: 'red', width: '100%'}} />
-      <Text>Page 2</Text>
+      <FormField labelText="Email" isSecure={false} />
+      <FormField labelText="Password" isSecure />
+
       <Pressable
         onPress={() => navigation.navigate('Details')}
         style={{backgroundColor: 'plum', padding: 10, width: '100%'}}>
